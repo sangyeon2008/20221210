@@ -1,0 +1,55 @@
+def solution(n):
+    remain = []
+    answer = 0
+    while n != 0:
+        remain.append(n % 3)
+        n = n//3
+        #remain = ['0','0','2','1']
+
+        #string = '0021'
+    l = 0
+    remain.reverse()
+    for j in range(len(remain)):
+        if l == 0:
+            answer += remain[j]
+            l += 1
+        else:
+            answer += remain[j] * (3 ** l)
+            l+=1
+    return answer
+
+
+
+# s='Hello'
+# s[0]='A'
+# print(s)
+
+a='Hello'
+b='world'
+print(a+' '+b)
+
+
+#문자열 함수
+#replace(old,new) old를 new로 바꾸처주는 함수
+#count() 특정문자를 세주어서 값을 반환해 주는 함수
+# find()특정문자를 찾아서 익덱스 번호 반화, 문자를 못찾으면 -1 반환
+# index()특정문자를 찾아서 인덱스 번호 반환, 문자를 못찾으면 에러
+# split()소괄호 안에 들어가는 문자를 기준으로 나누어서
+# 문자열을 리스트로 바꾸어주는 함수, 소괄호 안에 문자를 안 넣어주면
+# 모든 공백 기준으로 나누어서 리스트로 만든다.
+# upper(),lower()
+# upper()=대문자로 바꾸어주는함수, lower()= 소문자로 바꾸어주는 함수
+# isalpha(),isdigit(),isalnum()
+# isalpha()=문자가 영어가 맞으면 true,아니면false
+# usdugit()=숫자인지 확인, 맞으면 true, 아니면 false
+# isalnum()=문자이기도 하고 숫자이기도 하면 true, 아니면 false
+# 특수문자는 문자로 인식 x
+#join(문자열)=리스트를 문자열로 바꾸어주는 함수
+a='12358'
+print(a.isalnum())
+
+
+
+
+
+17681 비밀지도
